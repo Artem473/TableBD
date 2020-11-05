@@ -3,13 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane fx:id="tableBD" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+<TabPane fx:id="tableBD" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Controller">
   <tabs>
     <Tab text="Courses">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TableView fx:id="tableCourses" prefHeight="374.0" prefWidth="600.0">
+                  <TableView fx:id="tableCourses" prefHeight="572.0" prefWidth="600.0">
                     <columns>
                       <TableColumn fx:id="tableCoursesID" prefWidth="32.0" text="id" />
                       <TableColumn fx:id="tableCoursesTitle" prefWidth="260.0" text="title" />
@@ -17,6 +17,23 @@
                         <TableColumn fx:id="tableCoursesDescription" prefWidth="264.0" text="description" />
                     </columns>
                   </TableView>
+                  <Button layoutX="613.0" layoutY="496.0" mnemonicParsing="false" text="Изменить запись " />
+                  <Button layoutX="613.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Выбрать запись " />
+                  <Button layoutX="789.0" layoutY="496.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Удалить запись " />
+                  <Button layoutX="789.0" layoutY="440.0" mnemonicParsing="false" text="Добавить запись " />
+                  <Label layoutX="625.0" layoutY="23.0" text="ID" />
+                  <Label layoutX="625.0" layoutY="56.0" text="Name" />
+                  <Label layoutX="625.0" layoutY="92.0" text="LastName" />
+                  <Label layoutX="625.0" layoutY="132.0" text="Email" />
+                  <Label layoutX="625.0" layoutY="167.0" text="Login" />
+                  <Label layoutX="625.0" layoutY="206.0" text="Password" />
+                  <TextField fx:id="txtID" layoutX="696.0" layoutY="19.0" prefHeight="25.0" prefWidth="290.0" />
+                  <TextField layoutX="696.0" layoutY="52.0" prefHeight="25.0" prefWidth="290.0" />
+                  <TextField layoutX="696.0" layoutY="88.0" prefHeight="25.0" prefWidth="290.0" />
+                  <TextField layoutX="696.0" layoutY="128.0" prefHeight="25.0" prefWidth="290.0" />
+                  <TextField layoutX="696.0" layoutY="163.0" prefHeight="25.0" prefWidth="290.0" />
+                  <TextField layoutX="696.0" layoutY="202.0" prefHeight="25.0" prefWidth="290.0" />
+                  <Label layoutX="617.0" layoutY="540.0" prefHeight="17.0" prefWidth="328.0" />
                </children></AnchorPane>
       </content>
     </Tab>

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionUtil {
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/courseswithdata?serverTimezone=UTC";
+    private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/courses?serverTimezone=UTC";
     private static final String DB_USER = "user@localhost";
     private static final String DB_PASSWORD = "1111";
 

@@ -1,7 +1,8 @@
-package sample.controller;
+package sample.controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -19,9 +20,11 @@ import java.sql.SQLException;
 
 public class Controller {
     Connection connection = null;
+
     public Controller() throws ClassNotFoundException {
         connection = ConnectionUtil.connectionDB();
     }
+
     //COURSES
     @FXML
     private TableView<ModelTableCourses> tableCourses;
@@ -81,7 +84,7 @@ public class Controller {
     private TableColumn<ModelTableTeachers, String> tableUsersPassword;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         //Courses
         ObservableList<ModelTableCourses> listTableCourses = FXCollections.observableArrayList();
 
@@ -90,7 +93,7 @@ public class Controller {
         try {
             PreparedStatement statement = connection.prepareStatement(sqlTableCourses);
             ResultSet resultTableCourses = statement.executeQuery();
-            while (resultTableCourses.next()){
+            while (resultTableCourses.next()) {
 
                 listTableCourses.add(new ModelTableCourses(
                         resultTableCourses.getString(1),
@@ -116,7 +119,7 @@ public class Controller {
         try {
             PreparedStatement statement = connection.prepareStatement(sqlTableLessons);
             ResultSet resultTableLessons = statement.executeQuery();
-            while (resultTableLessons.next()){
+            while (resultTableLessons.next()) {
                 listTableLessons.add(new ModelTableLessons(
                         resultTableLessons.getString(1),
                         resultTableLessons.getString(2),
@@ -143,7 +146,7 @@ public class Controller {
         try {
             PreparedStatement statement = connection.prepareStatement(sqlTableTeachers);
             ResultSet resultTableTeachers = statement.executeQuery();
-            while (resultTableTeachers.next()){
+            while (resultTableTeachers.next()) {
                 listTableTeachers.add(new ModelTableTeachers(
                         resultTableTeachers.getString(1),
                         resultTableTeachers.getString(2),
@@ -168,7 +171,7 @@ public class Controller {
         try {
             PreparedStatement statement = connection.prepareStatement(sqlTableUsers);
             ResultSet resultTableUsers = statement.executeQuery();
-            while (resultTableUsers.next()){
+            while (resultTableUsers.next()) {
                 listTableUsers.add(new ModelTableUsers(
                         resultTableUsers.getString(1),
                         resultTableUsers.getString(2),

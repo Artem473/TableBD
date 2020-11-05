@@ -10,13 +10,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Show tables in database.");
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/WindowSignIn.fxml"));
+        primaryStage.setTitle("Please sign in");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
-
-
     public static void main(String[] args) {
         launch(args);
     }
